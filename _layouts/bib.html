@@ -13,7 +13,15 @@
   {% if entry.type == "thesis" %}
     {{reference}}
   {% else %}
-    <span class="title">{{entry.title}}</span>
+  {% if entry.pdf %}
+    <a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">  <span class="title"><b>{{entry.title}}</b></span></a>
+  {% else %}
+    {% if entry.html %}
+      <a href="{{ entry.html }}" target="_blank"> <span class="title"><b>{{entry.title}}</b></span></a>
+    {% else %}
+      <span class="title"><b>{{entry.title}}</b></span>
+    {% endif %}
+  {% endif %}
     <span class="author">
       {% for author in entry.author_array %}
         {% if forloop.length == 1 %}
@@ -28,7 +36,7 @@
               <em>{{author.last}}, {{author.first}}</em>,
             {% else %}
               {% if site.data.coauthors[author.last] %}
-                <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>, 
+                <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
               {% else %}
                 {{author.last}}, {{author.first}},
               {% endif %}
@@ -38,7 +46,7 @@
               and <em>{{author.last}}, {{author.first}}</em>
             {% else %}
               {% if site.data.coauthors[author.last] %}
-                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a> 
+                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>
               {% else %}
                 and {{author.last}}, {{author.first}}
               {% endif %}
@@ -54,25 +62,25 @@
     {% elsif entry.type == "inproceedings" %}
       <em>In {{entry.booktitle}}</em>
     {% endif %}
-    {% if entry.year %}
+    <!-- {% if entry.year %}
       {{entry.year}}
-    {% endif %}
+    {% endif %} -->
     </span>
   {% endif %}
 
   <span class="links">
   {% if entry.abstract %}
-    [<a class="abstract">Abs</a>]
+    <!-- [<a class="abstract">Abs</a>] -->
   {% endif %}
   {% if entry.arxiv %}
     [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
   {% endif %}
-  {% if entry.html %}
+  <!-- {% if entry.html %}
     [<a href="{{ entry.html }}" target="_blank">HTML</a>]
-  {% endif %}
-  {% if entry.pdf %}
+  {% endif %} -->
+  <!-- {% if entry.pdf %}
     [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
-  {% endif %}
+  {% endif %} -->
   {% if entry.supp %}
     [<a href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Supp</a>]
   {% endif %}
@@ -89,7 +97,7 @@
 
   <!-- Hidden abstract block -->
   {% if entry.abstract %}
-  <span class="abstract hidden">
+  <span class="abstract">
     <p>{{ entry.abstract }}</p>
   </span>
   {% endif %}

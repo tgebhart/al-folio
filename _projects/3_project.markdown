@@ -1,56 +1,10 @@
 ---
 layout: page
-title: Project 3
-description: a project that redirects to another website
-img:
-redirect: https://unsplash.com
+title: Predicting Macrocyclic Molecular Recognition with Machine Learning
+description:
+img: /assets/img/predicting_macrocyclic.jpg
 ---
 
-Every project has a beautiful feature shocase page. It's easy to include images, in a flexible 3-column grid format. Make your photos 1/3, 2/3, or full width.
+Article is available [here](https://chemrxiv.org/s/72854ee1b010fa7ab28d).
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: Project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-
-<div class="img_row">
-    <img class="col one left" src="{{ site.baseurl }}/assets/img/1.jpg" alt="" title="example image"/>
-    <img class="col one left" src="{{ site.baseurl }}/assets/img/2.jpg" alt="" title="example image"/>
-    <img class="col one left" src="{{ site.baseurl }}/assets/img/3.jpg" alt="" title="example image"/>
-</div>
-<div class="col three caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="img_row">
-    <img class="col three left" src="{{ site.baseurl }}/assets/img/5.jpg" alt="" title="example image"/>
-</div>
-<div class="col three caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images. Say you wanted to write a little bit about your project before you posted the rest of the images. You describe how you toiled, sweated, *bled* for your project, and then.... you reveal it's glory in the next row of images.
-
-
-<div class="img_row">
-    <img class="col two left" src="{{ site.baseurl }}/assets/img/6.jpg" alt="" title="example image"/>
-    <img class="col one left" src="{{ site.baseurl }}/assets/img/11.jpg" alt="" title="example image"/>
-</div>
-<div class="col three caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-<br/><br/>
-
-
-The code is simple. Just add a col class to your image, and another class specifying the width: one, two, or three columns wide. Here's the code for the last row of images above:
-
-<div class="img_row">
-    <img class="col two left" src="/img/6.jpg"/>
-    <img class="col one left" src="/img/11.jpg"/>
-</div>
+DFT calculations are used as training data to pre-dict equilibrium binding constants of small molecules to cu curbit[7]uril (CB[7]) with kernel-based support vector machinelearning. This trained algorithm was then used to predict thebinding of two promising small molecule drugs in the clinicagainst pediatric low grade glioma, TAK-580 and Selumetinib.The algorithm predicted strong binding for TAK-580 and poorbinding for Selumetinib. These results were experimentally vali-dated. It was also discovered that the slightly larger homologuecucurbit[8]uril (CB[8]) is partial to Selumetinib, suggesting anopportunity for tunable release kinetics by introducing differ-ent concentrations of CB[7] or CB[8] into a system such as ahydrogel depot for local drug delivery.  We also qualitativelydemonstrated that these two drugs have different therapeuticwindows and may have utility in combination against low gradegliomas. Finally, mass transfer simulations were performed toshow how CB[7] can independently tune the release of TAK-580across time scales from seconds to a year without changing thekinetics of Selumetinib. This work shows how machine learningmay prove valuable in the development of drug-delivery sys-tems for combination therapies and the field of supramolecularchemistry more broadly.
